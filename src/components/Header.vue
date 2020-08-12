@@ -1,25 +1,37 @@
 <template>
-  <div>
-    <img alt="Vue logo" src="./../assets/logo.png">
-    <h1>{{Msg}}</h1>
+  <div class="header">
+    <img class="brand" alt="Vue logo" src="../assets/logo.png">
+    <h1>{{ msg }}</h1>
   </div>
 </template>
 
 <script>
 export default {
-    name: 'Header',
-    props: {
-        Msg: String
-    }
+  name: 'Header',
+  props: {
+    msg: String
+  }
 }
 </script>
 
+<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    h3 {
-    margin: 40px 0 0;
-    }
-    div {
-            border-top: 10px solid #383f5d;
-            background:#FFEDE1;
-    }
+.header{
+  height: 250px;
+    border-top: 10px solid #383f5d;
+    background:#FFEDE1;
+}
+.header h1{
+  display:inline-block;
+  position: absolute;
+  right: 300px;
+}
+.brand{
+  display:inline-block;
+  position: absolute;
+  left:300px;
+}
+.clear{
+  clear: both;
+  }
 </style>

@@ -1,33 +1,45 @@
 <template>
-    <nav>
-        <h1>NavBar</h1>
-        <div>
-            <ul>
-                <li v-for="mnuItem in arrMenu" v-bind:key="menuArray.id">
-                    <NavItem :menu="menuArray"/>
-                </li>
-            </ul>
-        </div>
-    </nav>
+  <div class="navegation">
+    <h3>{{ msg }}</h3>
+    <ul>
+      <li><a href="#">Core Docs</a></li>
+      <li><a href="#">Forum</a></li>
+      <li><a href="#">Community Chat</a></li>
+      <li><a href="#">Twitter</a></li>
+      <li><a href="#">News</a></li>
+    </ul>
+  </div>
 </template>
 
 <script>
-    import NavItem from './NavItem';
-
-    export default {
-        name: 'NavBar',
-        components: {
-            NavItem
-        },
-        props: {
-            menus: Array
-        }
-    }
+export default {
+  name: 'Navegation',
+  props: {
+    msg: String
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    nav {
-        background-color: gray;
-    }
+h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+.navegation li{
+  list-style: none;
+  display: inline-block;
+  padding: 0 5px;
+}
+.navegation li a{
+    text-decoration: none;
+    font-weight: bold;
+}
 </style>
